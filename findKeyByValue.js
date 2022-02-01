@@ -14,13 +14,11 @@ const assertEqual = function (actual, expected) {
   }
 };
 const findKeyByValue = function (objectInput, valueInput) {
-  let keyFound = "";
   //iterating over the keys
   for (const key of Object.keys(objectInput)) {
     //comparing object values with given values
     if (objectInput[key] === valueInput) {
-      keyFound = key;
-      return keyFound;
+      return key;
     }
   }
 };
