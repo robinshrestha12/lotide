@@ -1,6 +1,4 @@
 function eqArrays(array1, array2) {
-  //console.log(array2.length);
-  //console.log(array1.length);
   if (array1.length !== array2.length) {
     return false;
   }
