@@ -1,12 +1,23 @@
 // TEST CODE
-const assertEqual = require('../assertEqual')
+//const assertEqual = require('../assertEqual')
+const assert = require('chai').assert;
 const tail = require('../tail');
 
-const result = tail(["Hello", "Lighthouse", "Hello", "Labs"]);
-assertEqual(result[1], "Hello");
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words); // no need to capture the return value since we are not checking it
-assertEqual(words.length, 3); // original array should still have 3 elements!
-const numbers = tail([5, 6, 7]);
-assertEqual(numbers[0], 5);
-assertEqual(numbers[1], 5);
+describe('#tail', () => {
+  it("returns Hello for ['Hello', 'Lighthouse', 'Hello', 'Labs']", () => {
+    const result = tail(["Hello", "Lighthouse", "Hello", "Labs"]);
+    assert.strictEqual(result[1], "Hello");
+  });
+  it("returns '6' for ['6']", () => {
+    const numbers = tail([5, 6, 7]);
+    assert.strictEqual(numbers[0], 6);
+  });
+  it(" original array should still have 3 elements!", () => {
+    const words = ["Yo Yo", "Lighthouse", "Labs"];
+    assert.strictEqual(words.length, 3);
+  });
+  it("returns undefined when array is undefined", () => {
+    assert.deepEqual(tail([]), []);
+  });
+});
+
