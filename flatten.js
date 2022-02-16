@@ -40,3 +40,5 @@ const flatten = function (arrayCollection) {
 const arrayValue = flatten([1, 2, [3, 4], 5, [6]]);// => [1, 2, 3, 4, 5, 6]
 console.log(arrayValue);
 assertArraysEqual(arrayValue, [1, 2, [3, 4], 5, [6]]);
+
+module.exports = flatten;

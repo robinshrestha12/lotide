@@ -43,3 +43,4 @@ assertArraysEqual(map(words, word => word[0]), ['t', 'h', 'd', 'c', 'd']);
 words = ["Ottawa", "Toronto", "Montreal", "Regina", "Calgary"];
 assertArraysEqual(map(words, word => word[0]), ['O', 'T', 'M', 'R', 'C']);
 
+module.exports = map;

@@ -46,3 +46,5 @@ let expectedValue = {
   s: 1
 }
 assertEqual(inputValue.toString(), expectedValue.toString());
+
+module.exports = countLetters;
