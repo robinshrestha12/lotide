@@ -1,4 +1,4 @@
-const assertEqual = function (actual, expected) {
+const assertEqual = function(actual, expected) {//assertEqual function
   if (((typeof (actual) === "number")) && ((typeof (expected) === "number"))) {
     if (actual === expected) {
       console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
@@ -13,7 +13,7 @@ const assertEqual = function (actual, expected) {
     }
   }
 };
-const findKeyByValue = function (objectInput, valueInput) {
+const findKeyByValue = function(objectInput, valueInput) {
   //iterating over the keys
   for (const key of Object.keys(objectInput)) {
     //comparing object values with given values
@@ -23,7 +23,7 @@ const findKeyByValue = function (objectInput, valueInput) {
   }
 };
 const bestTVShowsByGenre = {
-  sci_fi: "The Expanse",
+  sciFi: "The Expanse",
   comedy: "Brooklyn Nine-Nine",
   drama: "The Wire"
 };

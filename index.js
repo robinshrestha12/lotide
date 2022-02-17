@@ -1,3 +1,4 @@
+//modules imports
 const head = require('./head');
 const tail = require('./tail');
 const middle = require('./middle');
@@ -17,7 +18,7 @@ const takeUntil = require('./takeUntil');
 const without = require('./without');
 
 module.exports = {
-  //Object property value shortnand in JavaScript with ES6
+  //Object property value shorthand in JavaScript with ES6
   head,
   tail,
   middle,

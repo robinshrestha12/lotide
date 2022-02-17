@@ -1,27 +1,24 @@
-const takeUntil = function (array, callback) {
+const takeUntil = function(array, callback) {
   let finalArray = [];
   for (let arr of array) {
     //checking whether callback(parameters) returns truthy value
     if (!callback(arr)) {
       finalArray.push(arr);
-    }
-    else {
+    } else {
       return finalArray;
     }
   }
   return finalArray;
 };
 
-function eqArrays(array1, array2) {
+const eqArrays = function(array1, array2) { //eqArrays function
   if (array1.length !== array2.length) {
     return false;
-  }
-  else {
+  } else {
     for (let i = 0; i < array2.length; i++) {
       if (typeof array1[i] !== typeof array2[i]) {
         return false;
-      }
-      else {
+      } else {
         if (array1[i] !== array2[i]) {
           return false;
         }
@@ -29,14 +26,14 @@ function eqArrays(array1, array2) {
     }
   }
   return true;
-}
-const assertArraysEqual = function (arrayOne, arrayTwo) {
+};
+const assertArraysEqual = function(arrayOne, arrayTwo) { //assertArraysEqual function
   if (eqArrays(arrayOne, arrayTwo) === true) {
     console.log(`✅✅✅ Assertion Passed: ${arrayOne} === ${arrayTwo}`);
   } else {
     console.log(`🛑🛑🛑 Assertion Failed: ${arrayOne} !== ${arrayTwo}`);
   }
-}
+};
 
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
 const results1 = takeUntil(data1, x => x < 0);

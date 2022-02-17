@@ -1,13 +1,11 @@
-function eqArrays(array1, array2) {
+const eqArrays = function(array1, array2) {//eqArrays function
   if (array1.length !== array2.length) {
     return false;
-  }
-  else {
+  } else {
     for (let i = 0; i < array2.length; i++) {
       if (typeof array1[i] !== typeof array2[i]) {
         return false;
-      }
-      else {
+      } else {
         if (array1[i] !== array2[i]) {
           return false;
         }
@@ -15,24 +13,23 @@ function eqArrays(array1, array2) {
     }
   }
   return true;
-}
-const assertArraysEqual = function (arrayOne, arrayTwo) {
+};
+const assertArraysEqual = function(arrayOne, arrayTwo) { //assertarraysequal function
   if (eqArrays(arrayOne, arrayTwo) === true) {
     console.log(`✅✅✅ Assertion Passed: ${arrayOne} === ${arrayTwo}`);
   } else {
     console.log(`🛑🛑🛑 Assertion Failed: ${arrayOne} !== ${arrayTwo}`);
   }
-}
-const letterPositions = function (sentence) {
+};
+const letterPositions = function(sentence) {
   const results = {};
-  for (let i = 0; i < sentence.length; i++) {
+  for (let i = 0; i < sentence.length; i++) { //iterating through the sentence
     if (sentence[i] === " ") {
       continue;
     }
-    if (results[sentence[i]]) {
+    if (results[sentence[i]]) { //if already present push as another index item.
       results[sentence[i]].push(i);
-    }
-    else {
+    } else {
       results[sentence[i]] = [i];
     }
   }

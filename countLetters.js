@@ -1,4 +1,4 @@
-const assertEqual = function (actual, expected) {
+const assertEqual = function(actual, expected) { // AssertEqual Function
   if (((typeof (actual) === "number")) && ((typeof (expected) === "number"))) {
     if (actual === expected) {
       console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
@@ -13,16 +13,15 @@ const assertEqual = function (actual, expected) {
     }
   }
 };
-const countLetters = function (inputStrings) {
-  let outputObject = {};
-  for (const str of inputStrings) {
+const countLetters = function(inputStrings) {
+  let outputObject = {}; // defining an object
+  for (const str of inputStrings) { //iterating through string
     if (str === " ") {
       continue;
     }
-    if (outputObject[str]) {
+    if (outputObject[str]) { // if string is already present
       outputObject[str] += 1;
-    }
-    else {
+    } else {
       outputObject[str] = 1;
     }
   }
@@ -44,7 +43,7 @@ let expectedValue = {
   h: 2,
   t: 1,
   s: 1
-}
+};
 assertEqual(inputValue.toString(), expectedValue.toString());
 
 module.exports = countLetters;
