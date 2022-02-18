@@ -2,7 +2,7 @@
   "name": "@robinshrestha/lotide",
   "version": "1.0.0",
   "description": "publishing lotide project as a part of studies in Lighthouse lab",
-  "main": "assertArraysEqual.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
