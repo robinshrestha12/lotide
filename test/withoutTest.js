@@ -12,5 +12,8 @@ describe('#without', () => {
   it("returns ['hello', 'world'] when passed (['hello', 'world', 'lighthouse'], ['lighthouse'])", () => {
     assert.strictEqual(eqArrays(without(["hello", "world", "lighthouse"], ["lighthouse"]), ["hello", "world"]), true);
   });
+  it('Returns ["2"] for ["1", "1", "1", "2", "3", "1" , "1"] and ["1", 2, "3"]', () => {
+    assert.strictEqual(eqArrays(without(["1", "1", "1", "2", "3", "1" , "1"] , ["1", 2, "3"]),  ["2"]), true);
+  });
 });
 
